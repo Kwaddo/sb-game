@@ -108,7 +108,7 @@ function createTilemap() {
     mapElement.style.width = `${columns * tileSize}px`;
     mapElement.style.height = `${rows * tileSize}px`;
     mapElement.style.backgroundSize = `${columns * tileSize}px ${rows * tileSize}px`;
-    mapElement.style.backgroundImage = `url('/assets/images/${selectedMap}.png')`;
+    mapElement.style.backgroundImage = `url('${selectedMap}.png')`;
 
     tilemapContainer.style.gridTemplateColumns = `repeat(${columns}, ${tileSize}px)`;
     tilemapContainer.style.gridTemplateRows = `repeat(${rows}, ${tileSize}px)`;

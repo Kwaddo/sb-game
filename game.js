@@ -150,15 +150,6 @@ function showWinPopup() {
     }, 2000);
 }
 
-function hideNameMenu() {
-    if (namePrompt) {
-        namePrompt.remove();
-        namePrompt = null;
-    }
-    nameMenu = false;
-    isPaused = false;
-}
-
 function updateLeaderboard(name, score) {
     const leaderboard = document.getElementById("leaderboard");
     if (!leaderboard) {
@@ -447,6 +438,7 @@ function initGame() {
     lives = 2;
     window.hintScore = 0;
     initPlayer();
+    window.clearHints();
     window.initCharacter();
     createCountdownTimer();
     startCountdown();
